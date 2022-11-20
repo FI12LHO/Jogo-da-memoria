@@ -78,7 +78,7 @@ export function Play() {
             return
         }
 
-        if (countColorsChosen <= 0 ) {
+        if (useState.length == 0 ) {
             toast.show({
                 title: "Repita a sequencia informada!",
                 placement: "bottom",
@@ -126,6 +126,7 @@ export function Play() {
 
         if (fail) {
             setUserSequence([]);
+            setSequence([]);
             setCountColorsChosen(0);
 
             setScreenColor("red.400");

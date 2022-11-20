@@ -12,7 +12,7 @@ export function GameInfo({ score, colorsCount, countColorsChosen, screenColor }:
         <VStack 
             alignItems="flex-start" width="full" 
             padding={5} borderColor="gray.300" 
-            borderWidth={1} bgColor="gray.200"
+            borderWidth={1} bgColor="slate.900"
             opacity={screenColor == "slate.900" ? 1 : 0.5 }
             rounded="md"
         >

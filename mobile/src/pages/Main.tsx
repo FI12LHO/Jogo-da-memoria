@@ -1,7 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
 import { Box, Button, Text, VStack } from "native-base";
-import { Image } from "react-native";
-import Logo from "../assets/logo.png";
 
 export function Main() {
     const navigation = useNavigation();
@@ -31,8 +29,7 @@ export function Main() {
                     _pressed={{
                         bgColor: "green.800"
                     }}
-                    onPress={() => {}}
-                >
+                    onPress={() => navigation.navigate("Score")}>
                     <Text color="white" fontWeight="bold" fontSize="lg">Pontuações</Text>
                 </Button>
             </VStack>

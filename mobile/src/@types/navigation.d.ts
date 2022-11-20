@@ -3,6 +3,7 @@ declare global {
         interface RootParamList {
             Play: undefined,
             Main: undefined,
+            Score: undefined,
         }
     }
 }
