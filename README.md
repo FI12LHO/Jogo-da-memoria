@@ -43,6 +43,3 @@ Projeto construído utilizando React Native (Expo) e outras tecnologias. Esse é
 
 ### Preview
 https://user-images.githubusercontent.com/40048345/204958055-572caf23-0d43-48ff-baaa-3a621bf4a4a6.mp4
-![dabae4cc-7178-4a45-aba6-778102a4b46f](https://user-images.githubusercontent.com/40048345/204958123-01c74467-b1c8-499a-8e62-6396bda26f06.jpeg=100x20)
-![Screenshot_1669863740](https://user-images.githubusercontent.com/40048345/204958124-6b77e7f4-0a46-463d-a058-fee1b2268df4.png=100x20)
-
