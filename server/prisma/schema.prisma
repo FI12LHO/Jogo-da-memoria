@@ -18,27 +18,13 @@ model User {
   avatarUrl String?
   createdAt DateTime @default(now())
 
-  score Score[]
-  game  Game[]
+  game Game[]
 }
 
 model Game {
-  id      String @id @default(cuid())
-  userId  String
-  scoreId String
+  id     String @id @default(cuid())
+  userId String
+  score  Int
 
-  owner User  @relation(fields: [userId], references: [id])
-  score Score @relation(fields: [scoreId], references: [id])
-
-  @@unique([userId, scoreId])
-}
-
-model Score {
-  id        String   @id @default(cuid())
-  userId    String
-  points    Int
-  createdAt DateTime @default(now())
-
-  owner User   @relation(fields: [userId], references: [id])
-  game  Game[]
+  owner User? @relation(fields: [userId], references: [id])
 }

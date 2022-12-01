@@ -9,6 +9,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "prisma": {
+    "seed": "tsx prisma/seeds/seed.ts"
+  },
   "dependencies": {
     "@fastify/cors": "^8.2.0",
     "@fastify/jwt": "^6.3.3",

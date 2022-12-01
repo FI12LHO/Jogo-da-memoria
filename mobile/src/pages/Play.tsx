@@ -2,6 +2,7 @@ import { Button, HStack, Text, useToast, VStack } from "native-base";
 import { useState } from "react";
 import { ColorBlock } from "../components/ColorBlock";
 import { GameInfo } from "../components/GameInfo";
+import { Api } from "../service/api";
 
 export function Play() {
     const [screenColor, setScreenColor] = useState<"slate.900" | "red.400" | "green.400">("slate.900");
@@ -12,6 +13,11 @@ export function Play() {
     const [isValidated, setIsValidated] = useState<boolean>(true);
 
     const toast = useToast();
+
+    async function storeGame(score:number) {
+        await Api.post("/games", { score });
+        return null
+    }
 
     function start() {
         if (!isValidated) {
@@ -68,7 +74,7 @@ export function Play() {
         return
     }
 
-    function validateSequence() {
+    async function validateSequence() {
         if (isValidated) {
             toast.show({
                 title: "Pressione COMEÇAR para iniciar o jogo!",
@@ -90,6 +96,8 @@ export function Play() {
         setIsValidated(true);
 
         if (sequence.length != userSequence.length) {
+            storeGame(sequence.length - 1);
+
             setSequence([]);
             setUserSequence([]);
             setCountColorsChosen(0);
@@ -125,6 +133,8 @@ export function Play() {
         });
 
         if (fail) {
+            storeGame(sequence.length - 1);
+
             setUserSequence([]);
             setSequence([]);
             setCountColorsChosen(0);

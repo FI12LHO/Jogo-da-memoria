@@ -1,11 +1,11 @@
 import { Box, HStack, Text, VStack } from "native-base";
 
-interface Props {
+export interface UserScore {
     score: number,
     games: number
 }
 
-export function UserScore({score, games}:Props) {
+export function UserScore({score, games}:UserScore) {
     return (
         <VStack mt={5} px={6} w="full" alignItems="center">
             <Text color="white" fontSize={16} fontWeight="bold">Suas informações</Text>
