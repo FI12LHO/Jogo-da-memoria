@@ -15,7 +15,13 @@ export function Play() {
     const toast = useToast();
 
     async function storeGame(score:number) {
-        await Api.post("/games", { score });
+        try {
+            await Api.post("/games", { score });
+        
+        } catch (error) {
+            console.log({ error });
+        }
+
         return null
     }
 

@@ -13,8 +13,20 @@ Com os requisitos para uso do projeto, somente será necessário clonar o reposi
 
 
 ## Contrução
-  - Instale os pacotes com `$ npm install` ou `$ yarn`.
-  - Execute `$ npm start` ou `$ expo start` para iniciar a aplicação mobile.
+- ### Backend (Server)
+    - Instale os pacotes com `$ npm install`.
+    - Execute `$ npx prisma migrate dev` para rodar as migrations e as seeds.
+    - Execute `$ npm run dev` para iniciar o backend (servidor).
+
+
+- ### Mobile
+    - Instale os pacotes com `$ npm install`.
+    - Crie um app no google para poder ter acesso ao OAuth (https://docs.expo.dev/guides/authentication/#google).
+    - Renomei o arquivo `.env.exmaple` na raiz do projeto para `.env` e adicione o **cliente id**.
+    - Alterar o endereço do arquivo src/services/api.ts colocando o IP da máquina.
+    - Execute `$ npm start` ou `$ expo start` para iniciar a aplicação mobile.
+
+    **Caso o backend (server) não esteja rodando, os dados dos jogos não serão salvos**
 
 
 ## Projeto
@@ -26,3 +38,4 @@ Projeto construído utilizando React Native (Expo) e outras tecnologias. Esse é
 - [React Native](https://reactnative.dev/)
 - [Expo](https://expo.dev/)
 - [React Native Base](https://nativebase.io/)
+- [Prisma](https://www.prisma.io/)
